@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+:root {
+/* Criar variável */
+    --cor-primaria: #000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #5c4bbd; 
+    --cor-hover: #272727;
+
+    --primeira-fonte: 'Montserrat', sans-serif;
+    --segunda-fonte: 'Krona One', sans-serif;
+}
+
+body {
+    /* height: 100vh; */
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0 0 13%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 4.5rem;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--primeira-fonte);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    border-radius: 8px;
+    border: 0.3125rem dotted var(--cor-terciaria);
+    padding: 0.625rem;
+}
+
+.cabecalho__menu__link:hover{
+    background-color: var(--cor-hover);
+}
+
+.titulo-um {
+    color: var(--cor-terciaria)
+}
+
+/* .titulo-dois {
+    color: blue;
+} */
+
+.apresentacao {
+    padding: 4% 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5.125rem;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 1.5625rem;
+    font-family: var(--segunda-fonte);
+}
+
+.apresentacao__conteudo__paragrafo {
+    font-size: 1.25rem;
+    font-family: var(--primeira-fonte);
+}
+
+.apresentacao__links {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--segunda-fonte);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.apresentacao__links__link {
+    /* Define um modelo de layout flexbox para centralizar os elementos horizontalmente */
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  
+    /* Define uma borda arredondada */
+    border-radius: 0.5rem;
+  
+    /* Define o alinhamento do texto como centralizado */
+    text-align: center;
+  
+    /* Define a largura fixa do link em 300 pixels */
+    width: 50%;
+  
+    /* Define o preenchimento interno superior e inferior como 16 pixels */
+    padding: 1rem 0;
+  
+    /* Define o tamanho da linha como 36 pixels */
+    line-height: 2.25rem;
+  
+    /* Define o tamanho da fonte como 18 pixels */
+    font-size: 1.125rem;
+  
+    /* Remove qualquer decoração padrão de sublinhado no link */
+    text-decoration: none;
+  
+    /* Torna o texto mais negrito */
+    font-weight: 600;
+  
+    /* Define a borda como 2 pixels de largura e cor #22D4FD */
+    border: 2px solid var(--cor-terciaria);
+  
+    /* Define a cor do texto como #f6f6f6 */
+    color: var(--cor-secundaria);
+  
+    /* Define a fonte usada como 'Montserrat', uma fonte sans-serif */
+    font-family: var(--primeira-fonte);
+  }
+  
+  .apresentacao__links__link:hover{
+    /* Estilizar o link ao passar o mouse por cima (hover)*/
+    background-color: var(--cor-hover);
+  }
+
+.apresentacao__imagem {
+    width: 40%;
+
+}
+
+.rodape {
+    color: var(--cor-primaria);
+    text-align: center;
+    padding: 24px;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: var(--cor-terciaria);
+    font-family: var(--primeira-fonte);
+}
+
+/* Vai mudar apenas quando a width do projeto for menor que 1000*/
+@media (max-width: 1000px) {
+    .cabecalho {
+        padding: 10%;
+    }
+    .cabecalho__menu{
+        justify-content:center;
+    }
+
+    .apresentacao {
+        padding: 4%;
+        flex-direction: column-reverse; /* Em vez da imagem ficar em baixo, irá reverter, ou seja, ficar em cima.*/
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .apresentacao__imagem {
+        width: 50%;
+    }
+}
